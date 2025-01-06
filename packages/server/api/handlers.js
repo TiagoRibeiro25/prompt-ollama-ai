@@ -14,7 +14,7 @@ module.exports = {
 			return;
 		}
 
-        let response;
+		let response;
 
 		// Send the prompt to the AI model and get the response
 		try {
@@ -26,8 +26,9 @@ module.exports = {
 			res.status(500).json({ message: "Internal Server Error" });
 		}
 
-		// Improve this (this is very bad for performance)
 		let data = "";
+
+		// ! Improve this; bad for performance (parsing each word/line)
 		for (const line of response.data.split("\n")) {
 			try {
 				const lineData = JSON.parse(line);

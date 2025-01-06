@@ -4,7 +4,6 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon"
   },
   "keywords": [],
@@ -18,6 +17,7 @@
     "express": "^4.21.2"
   },
   "devDependencies": {
+    "dotenv": "^16.4.7",
     "nodemon": "^3.1.9"
   }
 }
